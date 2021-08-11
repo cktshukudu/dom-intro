@@ -9,7 +9,6 @@ var radioBillAddBtnElem = document.querySelector(".radioBillAddBtn");
 //create a variable that will keep track of the total bill
 var callsTotals = 0;
 var smsTotals = 0;
-//add an event listener for when the add button is pressed
 function textBillTotal(){
 //in the event listener get the value from the billItemTypeRadio radio buttons
 var checkedRadioBtnElem = document.querySelector("input[name='billItemType']:checked");
@@ -37,5 +36,5 @@ else if (totalCosts >= 30 && totalCosts < 50){
     totalTwoElem.classList.add("warning");
 }
 }
-// * display the latest total on the screen
+//add an event listener for when the add button is pressed
 radioBillAddBtnElem.addEventListener('click', textBillTotal);
