@@ -5,7 +5,7 @@ var billTotalElement = document.querySelector(".billTotal")
 //get a reference to the billString
 var billStringField = document.querySelector(".billString");
 
-
+var billStringElement = document.querySelector(".billString");
 //create the function that will be called when the calculate button is pressed
 function totalPhoneBill(billString){
 //  * this function should read the string value entered - split it on a comma.
@@ -38,10 +38,10 @@ function calculateBtnClicked(){
     billTotalElement.classList.remove("danger")
 
     if (currentTotal >= 30) {
-        //make the total to be in red
+        //red
         billTotalElement.classList.add("danger")
     } else if (currentTotal >= 20 && currentTotal < 30){
-        //make the total to be in orange
+        //orange
         billTotalElement.classList.add("warning")
     }
     billTotalElement.innerHTML = roundedBillTotal;
