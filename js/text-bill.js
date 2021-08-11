@@ -28,9 +28,10 @@ callTotalOneElem.innerHTML = callsTotal.toFixed(2);
     totalOneElem.innerHTML = totalCost.toFixed(2);
 // * add nothing for invalid values that is not 'call' or 'sms'.
 if (totalCost > 50){
-    // adding the danger class will make the text red
+    // red
     totalOneElem.classList.add("danger");
 }
+//orange
 else if (totalCost >= 30 && totalCost < 50){
     totalOneElem.classList.add("warning");
 }
