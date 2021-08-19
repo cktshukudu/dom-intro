@@ -27,14 +27,18 @@ smsTotalTwoElem.innerHTML = smsTotals.toFixed(2);
 var totalCosts = callsTotals + smsTotals;
 totalTwoElem.innerHTML = totalCosts.toFixed(2);
 
+
+
 if (totalCosts > 50){
     //red
     totalTwoElem.classList.add("danger");
+
 }
 //orange
 else if (totalCosts >= 30 && totalCosts < 50){
     totalTwoElem.classList.add("warning");
 }
+totalTwoElem.innerHTML = "R" + totalCosts.toFixed(2);
 }
 //add an event listener for when the add button is pressed
 radioBillAddBtnElem.addEventListener('click', textBillTotal);

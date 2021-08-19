@@ -44,7 +44,7 @@ function calculateBtnClicked(){
         //orange
         billTotalElement.classList.add("warning")
     }
-    billTotalElement.innerHTML = roundedBillTotal;
+    billTotalElement.innerHTML = "R" +roundedBillTotal.toFixed(2);
 }
 //link the function to a click event on the calculate button
 calculateBtn.addEventListener("click", calculateBtnClicked)

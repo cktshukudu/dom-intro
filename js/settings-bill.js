@@ -75,6 +75,7 @@ function colorBehaviour(){
         totalSettingsElem.classList.remove("danger")
         totalSettingsElem.classList.remove("warning")
     }   
+    totalSettingsElem.innerHTML = "R" + totalSettingsX.toFixed(2);
 }
 primaryElem.addEventListener("click", billSettingTotal);
 //add an event listener for when the add button is pressed

@@ -10,7 +10,8 @@ var totalOneElem = document.querySelector(".totalOne")
 
 var callsTotal = 0;
 var smsTotal = 0;
-
+var chageS=30;
+var chage=50;
 
 function textBillTotal(){
     var billTypeEntered = billTypeTextElem.value.trim();
@@ -27,14 +28,17 @@ callTotalOneElem.innerHTML = callsTotal.toFixed(2);
     var totalCost = callsTotal + smsTotal;
     totalOneElem.innerHTML = totalCost.toFixed(2);
 // * add nothing for invalid values that is not 'call' or 'sms'.
-if (totalCost > 50){
+if (totalCost > chage){
     // red
     totalOneElem.classList.add("danger");
+    
 }
 //orange
-else if (totalCost >= 30 && totalCost < 50){
+else if (totalCost >= chageS && totalCost < chage){
     totalOneElem.classList.add("warning");
 }
+
+totalOneElem.innerHTML = "R" + totalCost.toFixed(2);
 }
 
 //add an event listener for when the add button is pressed
